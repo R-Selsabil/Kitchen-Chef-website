@@ -1,0 +1,39 @@
+.diapo{
+    width: 90%;
+    height: 400px;
+    overflow: hidden;
+    background-color: black;
+    margin: 5%;
+
+}
+.diapo .images{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    gap: 2%;
+    animation: diaporama 20s infinite;
+}
+.diapo .images img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes diaporama{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-25%);
+    }
+    50%{
+        transform: translateX(-50%);
+    }
+    75%{
+        transform: translateX(-75%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.diapo .images:hover{
+    animation-play-state: paused;
+}

@@ -1,0 +1,138 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  justify-content: center;
+}
+
+
+.container{
+  overflow: hidden;
+  width: 90.7%;
+  padding: 5px;
+}
+
+.secondary_text{
+  color: #292C3F;
+  border-color: #292C3F;
+  outline-color: #292C3F;
+}
+
+
+.container .main-card{
+  display: flex;
+  width: 200%;
+  transition: 1s;
+}
+
+#two:checked ~ .main-card{
+  margin-left: -100%;
+  justify-content: space-between;
+
+}
+
+.container .main-card .cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  background: #F6E9DD;
+
+}
+
+.main-card .cards .card{
+  width: calc(100% / 7);
+  background: #fff;
+  border-radius: 12px;
+  padding: 5px;
+  margin: 5px;
+
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+  
+
+}
+
+.main-card .cards .card:hover{
+  transform: translateY(-15px);
+}
+.cards .card .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cards .card .content .img{
+  height: 200px;
+  width: 105%;
+  border-radius: 5%;
+  padding: 3px;
+  margin-bottom: 14px;
+}
+.card .content .img img{
+  height: 200px;
+  width: 95%;
+  border-radius: 5%;
+  object-fit: cover;
+
+}
+
+.container .button{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+
+
+.button label{
+  height: 15px;
+  width: 15px;
+  border-radius: 20px;
+  background: #990000;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.button label.active{
+  width: 35px;
+}
+#one:checked ~ .button .one{
+  width: 35px;
+}
+#one:checked ~ .button .two{
+  width: 15px;
+}
+#two:checked ~ .button .one{
+  width: 15px;
+}
+#two:checked ~ .button .two{
+  width: 35px;
+}
+input[type="radio"]{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .main-card .cards .card{
+    margin: 20px 0 10px 0;
+    width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 600px) {
+  .main-card .cards .card{
+    /* margin: 20px 0 10px 0; */
+    width: 100%;
+  }
+}
+
+
+.media-icons{
+  margin-top: 10px;
+  display: flex;
+}
